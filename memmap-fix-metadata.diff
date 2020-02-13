@@ -1,0 +1,17 @@
+--- memmap-0.7.0/Cargo.toml	1970-01-01T00:00:00+00:00
++++ memmap-0.7.0/Cargo.toml	2019-06-20T14:52:29.833440+00:00
+@@ -19,13 +19,11 @@
+ keywords = ["mmap", "memory-map", "io", "file"]
+ license = "MIT/Apache-2.0"
+ repository = "https://github.com/danburkert/memmap-rs"
++exclude = ["/ci/*", "/.appveyor.yml", "/.travis.yml"]
+ [dev-dependencies.tempdir]
+ version = "0.3"
+ [target."cfg(unix)".dependencies.libc]
+ version = "0.2"
+-[target."cfg(windows)".dependencies.winapi]
+-version = "0.3"
+-features = ["basetsd", "handleapi", "memoryapi", "minwindef", "std", "sysinfoapi"]
+ [badges.appveyor]
+ repository = "danburkert/mmap"
+ 
